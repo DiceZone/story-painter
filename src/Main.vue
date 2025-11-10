@@ -3,7 +3,7 @@
     <n-layout-header class="bg-slate-100 dark:bg-inherit">
       <n-flex class="py-3 text-2xl" size="large" align="center" justify="center" wrap>
         <n-flex align="center" justify="center">
-          <strong>海豹TRPG跑团Log着色器</strong>
+          <strong>海豹TRPG跑团Log着色器 - 骰区DiceZone</strong>
           <n-tag type="success" size="small" :bordered="false">v2.5.4</n-tag>
         </n-flex>
         <n-flex align="center" justify="center">
@@ -12,13 +12,13 @@
               <logo-github />
             </a>
           </n-icon>
-          <n-button type="primary" @click="backV1">官网</n-button>
+          <n-button type="primary" @click="backV1">海豹官网</n-button>
         </n-flex>
       </n-flex>
     </n-layout-header>
     <n-layout-content class="bg-slate-100 dark:bg-inherit">
       <div style="width: 1000px; margin: 0 auto; max-width: 100%; padding-bottom: 3rem">
-        <n-text type="info" italic class="block text-center my-1">SealDice骰QQ群 524364253 [群介绍中有其余3群]</n-text>
+        <n-text type="info" italic class="block text-center my-1">希亚的日志站反馈群1064492379 有问题请及时反馈</n-text>
         <option-view></option-view>
         <n-spin :show="loading">
           <template #description>

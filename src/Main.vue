@@ -3,7 +3,7 @@
     <n-layout-header class="bg-slate-100 dark:bg-inherit">
       <n-flex class="py-3 text-2xl" size="large" align="center" justify="center" wrap>
         <n-flex align="center" justify="center">
-          <strong>海豹TRPG跑团Log着色器 - 骰区DiceZone</strong>
+          <strong>海豹TRPG跑团Log着色器 - 骰子之间DiceZone</strong>
           <n-tag type="success" size="small" :bordered="false">v2.5.4</n-tag>
         </n-flex>
         <n-flex align="center" justify="center">

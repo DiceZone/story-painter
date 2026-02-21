@@ -135,7 +135,7 @@ export const useStore = defineStore('main', {
     },
 
     async tryFetchLog(key: string, password: string) {
-      const resp = await axios.get('https://log-api-dev.dice.zone/api/dice/load_data', {
+      const resp = await axios.get('https://log-api-test1.dice.zone/api/dice/load_data', {
         params: { key, password }
       })
       return resp.data

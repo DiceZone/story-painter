@@ -131,7 +131,7 @@ import PreviewItem from './components/previews/preview-main-item.vue'
 import PreviewTableTR from './components/previews/preview-table-tr.vue'
 import { LogItem, CharItem, packNameId } from "./logManager/types";
 import { setCharInfo } from './logManager/importers/_logImpoter'
-import { msgCommandFormat, msgImageFormat, msgIMUseridFormat, msgOffTopicFormat, msgAtFormat } from "./utils";
+import { applyQQImageRKeyReplacement, shouldApplyQQImageRKeyReplacement, msgCommandFormat, msgImageFormat, msgIMUseridFormat, msgOffTopicFormat, msgAtFormat } from "./utils";
 import { NButton, NText, useMessage, useModal, useNotification } from "naive-ui";
 import { User, LogoGithub, Delete as IconDelete } from '@vicons/carbon'
 import { breakpointsTailwind, useBreakpoints, useDark, useToggle } from '@vueuse/core'
@@ -265,6 +265,20 @@ function setupUA() {
 
 setupUA()
 
+const applyQQImageRKey = async (text: string) => {
+  if (!shouldApplyQQImageRKeyReplacement(text)) {
+    return text
+  }
+
+  try {
+    const payload = await store.tryFetchRKey()
+    return applyQQImageRKeyReplacement(text, payload)
+  } catch (e) {
+    console.log(e)
+    return text
+  }
+}
+
 const browserAlert = () => {
   if (downloadUsableRank.value === 0) {
     message.warning('你目前所使用的浏览器无法下载文件，请更换对标准支持较好的浏览器。建议使用Chrome/Firefox/Edge')
@@ -313,16 +327,18 @@ onMounted(async () => {
             file: asyncBuffer,
             compressors,
           })
+          const items = res.map(v => {
+            v.id = Number(v.id)
+            v.time = Number(v.time)
+            v.commandId = Number(v.commandId)
+            return v
+          })
+          const rawText = JSON.stringify({
+            items,
+            version: 105
+          })
+          const text = await applyQQImageRKey(rawText)
           nextTick(() => {
-            const text = JSON.stringify({
-              items: res.map(v => {
-                v.id = Number(v.id)
-                v.time = Number(v.time)
-                v.commandId = Number(v.commandId)
-                return v
-              }),
-              version: 105
-            })
             store.pcList.length = 0
 
             logMan.lastText = '';
@@ -335,8 +351,9 @@ onMounted(async () => {
           {
             const log = unzlibSync(Uint8Array.from(atob(record.data), c => c.charCodeAt(0)));
 
+            const rawText = strFromU8(log)
+            const text = await applyQQImageRKey(rawText)
             nextTick(() => {
-              const text = strFromU8(log)
               store.pcList.length = 0
 
               logMan.lastText = '';

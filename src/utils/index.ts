@@ -1,4 +1,5 @@
 export * from './types';
+export * from './rkey';
 // export * from './helpers';
 
 /**

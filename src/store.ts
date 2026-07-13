@@ -6,6 +6,8 @@ import { CharItem, LogItem, packNameId } from './logManager/types';
 import { random } from 'lodash-es';
 import * as twColors from 'tailwindcss/colors';
 
+const diceAPIBase = 'https://log-api.dice.zone/api/dice';
+
 export const useStore = defineStore('main', {
   state: () => {
     return {
@@ -135,11 +137,19 @@ export const useStore = defineStore('main', {
     },
 
     async tryFetchLog(key: string, password: string) {
-      // https://log-api.dice.zone/dice
-      const resp = await axios.get('https://log-api.dice.zone/api/dice/load_data', {
+      const resp = await axios.get(`${diceAPIBase}/load_data`, {
         params: { key, password }
       })
       return resp.data
+    },
+
+    async tryFetchRKey() {
+      const resp = await axios.get('https://dice-api.weizaima.com/api/v1/rkey')
+      return resp.data as {
+        private_rkey?: string
+        group_rkey?: string
+        expired_time?: number
+      }
     },
 
     /** 移除不使用的pc名字 */

@@ -53,6 +53,9 @@ importers:
       format-email:
         specifier: ^0.1.0
         version: 0.1.0
+      fzstd:
+        specifier: ^0.1.1
+        version: 0.1.1
       grapheme-splitter:
         specifier: ^1.0.4
         version: 1.0.4
@@ -1485,7 +1488,7 @@ packages:
     resolution: {integrity: sha512-7XHNxH7qX9xG5mIwxkhumTox/MIRNcOgDrxWsMt2pAr23WHp6MrRlN7FBSFpCpr+oVO0F744iUgR82nJMfG2SA==}
 
   fzstd@0.1.1:
-    resolution: {integrity: sha512-dkuVSOKKwh3eas5VkJy1AW1vFpet8TA/fGmVA5krThl8YcOVE/8ZIoEA1+U1vEn5ckxxhLirSdY837azmbaNHA==, tarball: https://registry.npmmirror.com/fzstd/-/fzstd-0.1.1.tgz}
+    resolution: {integrity: sha512-dkuVSOKKwh3eas5VkJy1AW1vFpet8TA/fGmVA5krThl8YcOVE/8ZIoEA1+U1vEn5ckxxhLirSdY837azmbaNHA==}
 
   gensync@1.0.0-beta.2:
     resolution: {integrity: sha512-3hN7NaskYvMDLQY55gnW3NQ+mesEAepTqlg+VEbj7zzqEMBVNhzcGYYeqFo/TlYz6eQiFcp1HcsCZO+nGgS8zg==}
@@ -1526,35 +1529,35 @@ packages:
     engines: {node: '>=12.0.0'}
 
   hightable@0.17.0:
-    resolution: {integrity: sha512-HXtmTwe5TmwL9toCRo2NB+zK5/1OuM3bqwzGoEAjsDW++BWKyLI0wLmBV1HcgLDtpglbPFuOoH0GndUUFlZY5g==, tarball: https://registry.npmmirror.com/hightable/-/hightable-0.17.0.tgz}
+    resolution: {integrity: sha512-HXtmTwe5TmwL9toCRo2NB+zK5/1OuM3bqwzGoEAjsDW++BWKyLI0wLmBV1HcgLDtpglbPFuOoH0GndUUFlZY5g==}
     peerDependencies:
       react: ^18.3.1
       react-dom: ^18.3.1
 
   hyparquet-compressors@1.1.1:
-    resolution: {integrity: sha512-yx7aA3Rhj0YycbdV71+XznQSLAefa4cT0urpgNXy4aM6eSeCknaVDNne8y45Uz74Fb15yyXUzOStlceOJBan7A==, tarball: https://registry.npmmirror.com/hyparquet-compressors/-/hyparquet-compressors-1.1.1.tgz}
+    resolution: {integrity: sha512-yx7aA3Rhj0YycbdV71+XznQSLAefa4cT0urpgNXy4aM6eSeCknaVDNne8y45Uz74Fb15yyXUzOStlceOJBan7A==}
 
   hyparquet-writer@0.3.5:
-    resolution: {integrity: sha512-7Ugi9J/Fia0rz+o+6aoKj82ZGmI0QJ4LO6hyexBZBDUl57i+qVyGz2vJZYQqG82vF/tpTmG3bISgxBnPhJhEKg==, tarball: https://registry.npmmirror.com/hyparquet-writer/-/hyparquet-writer-0.3.5.tgz}
+    resolution: {integrity: sha512-7Ugi9J/Fia0rz+o+6aoKj82ZGmI0QJ4LO6hyexBZBDUl57i+qVyGz2vJZYQqG82vF/tpTmG3bISgxBnPhJhEKg==}
 
   hyparquet@1.12.1:
-    resolution: {integrity: sha512-M525R8zlfVhz7k9NZr0yd9Tef50NEwYaBDqvLf0CmA/iwk9dHLtIKQvLpJds88Z2SgZVgUWAfR3PN5NJ1tDB8A==, tarball: https://registry.npmmirror.com/hyparquet/-/hyparquet-1.12.1.tgz}
+    resolution: {integrity: sha512-M525R8zlfVhz7k9NZr0yd9Tef50NEwYaBDqvLf0CmA/iwk9dHLtIKQvLpJds88Z2SgZVgUWAfR3PN5NJ1tDB8A==}
 
   hyparquet@1.13.1:
-    resolution: {integrity: sha512-xzUYyfqtIZypo5I1F2HXgnX5J4axKooVZj5GW58kUevfqsmnccZQ3mt+ByYE1MuX9v2pcYVZg48WW1hnO6ypSw==, tarball: https://registry.npmmirror.com/hyparquet/-/hyparquet-1.13.1.tgz}
+    resolution: {integrity: sha512-xzUYyfqtIZypo5I1F2HXgnX5J4axKooVZj5GW58kUevfqsmnccZQ3mt+ByYE1MuX9v2pcYVZg48WW1hnO6ypSw==}
 
   hyparquet@1.15.0:
-    resolution: {integrity: sha512-CDEvzNa8F1jWfxzbF8BVTT9Xi6lV8Jke4o3PmD9FE4R3iF0fGGgruEWulaAueAZDjMYC85SD+LCRfSuIquAjNw==, tarball: https://registry.npmmirror.com/hyparquet/-/hyparquet-1.15.0.tgz}
+    resolution: {integrity: sha512-CDEvzNa8F1jWfxzbF8BVTT9Xi6lV8Jke4o3PmD9FE4R3iF0fGGgruEWulaAueAZDjMYC85SD+LCRfSuIquAjNw==}
 
   hyperparam@0.2.49:
-    resolution: {integrity: sha512-jM7vdhNqs2YbPjuwHOrrYGKJkRhTkDZNguFUAoaa/lFz2bHOdgRBU6nJfB8i1A9HbPUDnPe/qBd/Hgs3R8k1Qw==, tarball: https://registry.npmmirror.com/hyperparam/-/hyperparam-0.2.49.tgz}
+    resolution: {integrity: sha512-jM7vdhNqs2YbPjuwHOrrYGKJkRhTkDZNguFUAoaa/lFz2bHOdgRBU6nJfB8i1A9HbPUDnPe/qBd/Hgs3R8k1Qw==}
     hasBin: true
 
   hysnappy@1.0.0:
-    resolution: {integrity: sha512-MNrC4NfwDGPb889O6gIfEtbvEZCSWUsSEhsz4Oq2FRcpGtXHfeVz3KciSPp5Pnnz1NjFMgDQNfxdJozymJEDDA==, tarball: https://registry.npmmirror.com/hysnappy/-/hysnappy-1.0.0.tgz}
+    resolution: {integrity: sha512-MNrC4NfwDGPb889O6gIfEtbvEZCSWUsSEhsz4Oq2FRcpGtXHfeVz3KciSPp5Pnnz1NjFMgDQNfxdJozymJEDDA==}
 
   icebird@0.3.0:
-    resolution: {integrity: sha512-NhuhvqVOhzY9wDzolAnc6nYqzWV/HNAF9DTl0Zr8SSr4IOV/ZWkwonu6hiZQJsw6gcQyWIxKx6Inl9Zr0iJsUQ==, tarball: https://registry.npmmirror.com/icebird/-/icebird-0.3.0.tgz}
+    resolution: {integrity: sha512-NhuhvqVOhzY9wDzolAnc6nYqzWV/HNAF9DTl0Zr8SSr4IOV/ZWkwonu6hiZQJsw6gcQyWIxKx6Inl9Zr0iJsUQ==}
 
   immediate@3.0.6:
     resolution: {integrity: sha512-XXOFtyqDjNDAQxVfYxuF7g9Il/IbWmmlQg2MYKOH8ExIT1qg6xc4zyS3HaEEATgs1btfzxq15ciUiY7gjSXRGQ==}
@@ -1649,7 +1652,7 @@ packages:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
 
   loose-envify@1.4.0:
-    resolution: {integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==, tarball: https://registry.npmmirror.com/loose-envify/-/loose-envify-1.4.0.tgz}
+    resolution: {integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==}
     hasBin: true
 
   lru-cache@10.4.3:
@@ -1849,12 +1852,12 @@ packages:
     resolution: {integrity: sha512-Mn6TbyYpFgwFuQ8KJKqf3bqqY9O1y37/0jgSK/61PUxV4QfIMv0+K2ioq8DfOjkBslcjwSzRfIDEXfzA9aCx7A==}
 
   react-dom@18.3.1:
-    resolution: {integrity: sha512-5m4nQKp+rZRb09LNH59GM4BxTh9251/ylbKIbpe7TpGxfJ+9kv6BLkLBXIjjspbgbnIBNqlI23tRnTWT0snUIw==, tarball: https://registry.npmmirror.com/react-dom/-/react-dom-18.3.1.tgz}
+    resolution: {integrity: sha512-5m4nQKp+rZRb09LNH59GM4BxTh9251/ylbKIbpe7TpGxfJ+9kv6BLkLBXIjjspbgbnIBNqlI23tRnTWT0snUIw==}
     peerDependencies:
       react: ^18.3.1
 
   react@18.3.1:
-    resolution: {integrity: sha512-wS+hAgJShR0KhEvPJArfuPVN1+Hz1t0Y6n5jLrGQbkb4urgPE/0Rve+1kMB1v/oWgHgm4WIcV+i7F2pTVj+2iQ==, tarball: https://registry.npmmirror.com/react/-/react-18.3.1.tgz}
+    resolution: {integrity: sha512-wS+hAgJShR0KhEvPJArfuPVN1+Hz1t0Y6n5jLrGQbkb4urgPE/0Rve+1kMB1v/oWgHgm4WIcV+i7F2pTVj+2iQ==}
     engines: {node: '>=0.10.0'}
 
   read-cache@1.0.0:
@@ -1923,7 +1926,7 @@ packages:
     resolution: {integrity: sha512-+aWOz7yVScEGoKNd4PA10LZ8sk0A/z5+nXQG5giUO5rprX9jgYsTdov9qCchZiPIZezbZH+jRut8nPodFAX4Jg==}
 
   scheduler@0.23.2:
-    resolution: {integrity: sha512-UOShsPwz7NrMUqhR6t0hWjFduvOzbtv7toDH1/hIrfRNIDBnnBWd0CwJTGvTpngVlmwGCdP9/Zl/tVrDqcuYzQ==, tarball: https://registry.npmmirror.com/scheduler/-/scheduler-0.23.2.tgz}
+    resolution: {integrity: sha512-UOShsPwz7NrMUqhR6t0hWjFduvOzbtv7toDH1/hIrfRNIDBnnBWd0CwJTGvTpngVlmwGCdP9/Zl/tVrDqcuYzQ==}
 
   seemly@0.3.9:
     resolution: {integrity: sha512-bMLcaEqhIViiPbaumjLN8t1y+JpD/N8SiyYOyp0i0W6RgdyLWboIsUWAbZojF//JyerxPZR5Tgda+x3Pdne75A==}

@@ -25,6 +25,7 @@
     "docx": "^8.6.0",
     "fflate": "^0.8.2",
     "file-saver": "^2.0.5",
+    "fzstd": "^0.1.1",
     "format-email": "^0.1.0",
     "grapheme-splitter": "^1.0.4",
     "hyparquet": "^1.15.0",

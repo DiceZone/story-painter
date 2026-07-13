@@ -141,6 +141,7 @@ import randomColor from "randomcolor";
 import { parquetReadObjects } from 'hyparquet'
 import { asyncBufferFrom } from 'hyperparam'
 import { compressors } from 'hyparquet-compressors'
+import { decompress as zstdDecompress } from 'fzstd'   // DiceNext 依赖
 
 
 const breakpoints = useBreakpoints(breakpointsTailwind)
@@ -311,7 +312,7 @@ onMounted(async () => {
     loading.value = true
     try {
       const record = await store.tryFetchLog(key, password) as {
-        client: 'SealDice' | 'Parquet',
+        client: 'SealDice' | 'Parquet' | 'DiceNext',
         created_at: string,
         data: string,
         name: string,
@@ -341,6 +342,18 @@ onMounted(async () => {
           nextTick(() => {
             store.pcList.length = 0
 
+            logMan.lastText = '';
+            logMan.syncChange(text, [0, store.editor.state.doc.length], [0, text.length])
+          });
+        }
+          break
+        case 'DiceNext': {
+          // DiceNext 专属：zstd 压缩的 {items, version} JSON（比 SealDice 的 zlib 更小、无需 parquet 重依赖）
+          const log = zstdDecompress(Uint8Array.from(atob(record.data), c => c.charCodeAt(0)))
+          const rawText = strFromU8(log)
+          const text = await applyQQImageRKey(rawText)
+          nextTick(() => {
+            store.pcList.length = 0
             logMan.lastText = '';
             logMan.syncChange(text, [0, store.editor.state.doc.length], [0, text.length])
           });
